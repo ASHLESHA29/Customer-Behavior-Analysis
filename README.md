@@ -1,16 +1,18 @@
-# Customer Behavior Analysis using PostgreSQL & Power BI
+# Customer Behavior Analysis using Python, PostgreSQL & Power BI
 
 ## 📌 Project Overview
-This project focuses on analyzing customer shopping behavior using **PostgreSQL** for data querying and **Power BI** for dashboard creation and visualization.  
-The main objective of this project is to uncover customer purchasing patterns, discount usage, category preferences, seasonal trends, and customer segmentation insights that can help businesses make better data-driven decisions.
+This project focuses on analyzing customer shopping behavior using **Python** for data cleaning and exploratory analysis, **PostgreSQL** for SQL-based querying, and **Power BI** for interactive dashboard creation.
 
-This project demonstrates end-to-end **Data Analyst workflow**, including:
-- Data exploration
+The main objective of this project is to uncover customer purchasing patterns, discount usage, category preferences, seasonal trends, repeat customer behavior, and customer segmentation insights that can help businesses make better data-driven decisions.
+
+This project demonstrates an end-to-end **Data Analyst workflow**, including:
+- Data understanding and cleaning
+- Exploratory Data Analysis (EDA)
 - SQL-based business problem solving
 - KPI analysis
 - Customer segmentation
 - Dashboard development
-- Business insights & recommendations
+- Business insights and recommendations
 
 ---
 
@@ -28,7 +30,10 @@ The key objectives of this project were:
 
 ## 🛠️ Tools & Technologies Used
 
-- **PostgreSQL** – Data storage, cleaning, and SQL analysis
+- **Python** – Data cleaning, preprocessing, and exploratory data analysis
+- **Pandas** – Data manipulation and transformation
+- **Jupyter Notebook** – Python-based EDA and data preparation
+- **PostgreSQL** – Data storage, SQL querying, and business analysis
 - **pgAdmin 4** – PostgreSQL database management
 - **Power BI** – Interactive dashboard and data visualization
 - **Excel / CSV** – Dataset source and initial review
@@ -58,19 +63,50 @@ The dataset used in this project contains customer shopping-related data such as
 - Payment Method
 - Frequency of Purchases
 
-> **Note:** This dataset was used for educational and portfolio purposes to practice SQL querying, business analysis, and dashboard creation.
+> **Note:** This dataset was used for educational and portfolio purposes to practice data analysis, SQL querying, business analysis, and dashboard creation.
 
 ---
 
 ## 🧹 Data Preparation & Setup
 
 ### Steps Performed:
-1. Imported the dataset into PostgreSQL
-2. Created a database and table structure
-3. Loaded customer data into the database
-4. Verified column names and data types
-5. Connected PostgreSQL database to Power BI
-6. Built visualizations based on SQL/business insights
+1. Reviewed the dataset in CSV/Excel format
+2. Performed initial data inspection using **Python (Pandas)**
+3. Checked for missing values, duplicates, and formatting issues
+4. Standardized column names for easier SQL analysis
+5. Imported the cleaned dataset into **PostgreSQL**
+6. Created the required database and table structure
+7. Loaded customer data into the database
+8. Verified column names and data types in PostgreSQL
+9. Connected PostgreSQL database to **Power BI**
+10. Built interactive visualizations based on SQL and business insights
+
+---
+
+## 🐍 Python Analysis (EDA & Data Preparation)
+
+Python was used as part of the data analysis workflow for:
+
+- Loading the raw dataset
+- Exploring the dataset structure
+- Checking null values and duplicates
+- Cleaning and formatting columns
+- Performing basic exploratory data analysis (EDA)
+- Preparing data before importing into PostgreSQL
+- Validating patterns before dashboard creation
+
+### Python Libraries Used:
+- **Pandas**
+- **NumPy** *(optional, if used)*
+- **Matplotlib / Seaborn** *(optional, if used for charts)*
+
+### Example Python Tasks:
+- `df.info()` for dataset structure review
+- `df.describe()` for summary statistics
+- `df.isnull().sum()` for missing value analysis
+- `df.duplicated().sum()` for duplicate detection
+- Column renaming and formatting
+- Exporting cleaned data for SQL import
 
 ---
 
@@ -103,7 +139,7 @@ Measured which products had the highest percentage of purchases with discounts a
 Studied how customer purchases varied across seasons.
 
 ### 5. Location-wise Category Trends
-Found top product categories by location/office/region using ranking functions.
+Found top product categories by location using ranking functions.
 
 ### 6. Customer Repeat Behavior
 Analyzed repeat customers using purchase frequency and previous purchases.
